@@ -1,0 +1,5 @@
+.DS_Store
+.env
+gatsby/.cache/
+gatsby/public/
+node_modules/

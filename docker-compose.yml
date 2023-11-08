@@ -1,0 +1,54 @@
+services:
+  gatsby:
+    container_name: gatsby
+    build:
+      context: ./
+      dockerfile: ./gatsby/Dockerfile
+    environment:
+      - STRAPI_TOKEN=${STRAPI_TOKEN}
+      - STRAPI_API_URL=http://strapi:1337
+      - INTERNAL_STATUS_PORT=8001
+    command: npm run develop
+    volumes:
+      - ./gatsby/gatsby-config.js:/srv/gatsby-config.js
+      - ./gatsby/gatsby-browser.js:/srv/gatsby-browser.js
+      - ./gatsby/tailwind.config.js:/srv/tailwind.config.js
+      - ./gatsby/postcss.config.js:/srv/postcss.config.js
+      - ./gatsby/src:/srv/src
+    ports:
+      - 80:8000
+      - 8001:8001
+
+  strapi:
+    container_name: strapi
+    build:
+      context: ./
+      dockerfile: ./strapi/Dockerfile
+    restart: always
+    environment:
+      - DATABASE_CLIENT=mysql
+      - DATABASE_HOST=mariadb
+      - DATABASE_PORT=3306
+      - DATABASE_NAME=${MYSQL_DATABASE}
+      - DATABASE_USERNAME=${MYSQL_USER}
+      - DATABASE_PASSWORD=${MYSQL_PASSWORD}
+      - APP_KEYS=${APP_KEYS}
+      - API_TOKEN_SALT=${API_TOKEN_SALT}
+      - ADMIN_JWT_SECRET=${ADMIN_JWT_SECRET}
+    volumes:
+      - ./strapi/config:/srv/config
+      - ./strapi/database:/srv/database
+      - ./strapi/public:/srv/public
+      - ./strapi/src:/srv/src
+    ports:
+      - 1337:1337
+
+  mariadb:
+    image: mariadb:10.7.4
+    container_name: mariadb
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
