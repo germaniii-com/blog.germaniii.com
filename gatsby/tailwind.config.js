@@ -8,8 +8,14 @@ module.exports = {
     extend: {
       colors: {
         primary: "#363636",
+        "primary-hover": "#858585",
+        "primary-active": "#ffffff",
+        "primary-on-dark": "#ffffff",
+        "accent-bg": "#bffdfd",
         accent: "#0878e7",
         white: "#ffffff",
+        "primary-alt": "#616161",
+        "accent-alt": "#2e42b1",
       },
     },
   },
