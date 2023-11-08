@@ -3,3 +3,4 @@
 gatsby/.cache/
 gatsby/public/
 node_modules/
+strapi/backup

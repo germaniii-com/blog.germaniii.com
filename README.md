@@ -4,6 +4,8 @@ This is the repository for blog.germaniii.com, which is the personal blog of ger
 This website is written in Javascript, Vue and Laravel. We also use the CMS App Strapi. To manage
 blog post contents.
 
+# Setup
+
 - Create a **.env** file in the project root folder with these vars:
 
 | Key                 | Value                         |
@@ -25,3 +27,12 @@ blog post contents.
 - Restart Docker Compose
 - Visit [http://localhost/](http://localhost/) to confirm it all works
 
+## BACKUP and RESTORE
+
+### BACKUP
+
+Make sure to not quit the docker container yet. And run `scripts/export.sh`
+
+### IMPORT
+
+Run `scripts/import.sh` and make sure the filename is the same as in the script
