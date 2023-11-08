@@ -1,5 +1,6 @@
 import { Link } from "gatsby";
 import React from "react";
+import NavbarButton from "./NavbarButton";
 
 const navbarLinks = [
   {
@@ -25,6 +26,8 @@ const navbarLinks = [
 ];
 
 const Navbar = () => {
+  const isSSR = window === undefined;
+
   return (
     <nav>
       <ul class="flex align-center justify-center space-x-5">
@@ -32,9 +35,7 @@ const Navbar = () => {
           return (
             <>
               <Link to={link.link}>
-                <li class="pointer block p-3 rounded text-primary hover:bg-primary hover:text-white">
-                  {link.name}
-                </li>
+                {!isSSR && <NavbarButton name={link.name} />}
               </Link>
             </>
           );

@@ -1,8 +1,10 @@
 # blog.germaniii.com
 
 This is the repository for blog.germaniii.com, which is the personal blog of germaniiifelisarta.
-This website is written in Javascript, Vue and Laravel. We also use the CMS App Strapi. To manage
-blog post contents.
+This website is written in Javascript, Vue and Laravel.
+We also use the CMS App Strapi. To manage blog post contents.
+
+## Setup
 
 - Create a **.env** file in the project root folder with these vars:
 
@@ -15,6 +17,7 @@ blog post contents.
 | APP_KEYS            | _Random string_               |
 | API_TOKEN_SALT      | _Random string_               |
 | ADMIN_JWT_SECRET    | _Random string_               |
+| API_TOKEN_SALT      | _Random string_               |
 | STRAPI_TOKEN        | _Create in Strapi, see below_ |
 
 - Run `docker compose up` in the root folder to start the containers
@@ -25,3 +28,30 @@ blog post contents.
 - Restart Docker Compose
 - Visit [http://localhost/](http://localhost/) to confirm it all works
 
+## Database Structure
+
+\* is required
+
+### article
+
+- content\* : richtext
+- title\* : text
+- tags : related
+
+### tag
+
+- name\* : text
+
+~~
+
+## BACKUP and RESTORE
+
+### BACKUP
+
+Make sure to not quit the docker container yet. And run `scripts/export.sh`
+
+### IMPORT
+
+Run `scripts/import.sh` and make sure the filename is the same as in the script
+
+~~
