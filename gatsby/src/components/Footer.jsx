@@ -10,23 +10,33 @@ import {
 
 const socialLinks = [
   {
-    icon: <SiGmail class="fill-primary w-3" />,
+    icon: (
+      <SiGmail class="fill-primary w-3 md:group-hover:motion-safe:animate-bounce" />
+    ),
     link: "mailto:germaniiifelisarta@gmail.com",
   },
   {
-    icon: <SiGithub class="fill-primary w-3" />,
+    icon: (
+      <SiGithub class="fill-primary w-3 md:group-hover:motion-safe:animate-bounce" />
+    ),
     link: "https://github.com/germaniii",
   },
   {
-    icon: <SiInstagram class="fill-primary w-3" />,
+    icon: (
+      <SiInstagram class="fill-primary w-3 md:group-hover:motion-safe:animate-bounce" />
+    ),
     link: "https://instagram.com/germaniiifelisarta",
   },
   {
-    icon: <SiLinkedin class="fill-primary w-3" />,
+    icon: (
+      <SiLinkedin class="fill-primary w-3 md:group-hover:motion-safe:animate-bounce" />
+    ),
     link: "https://www.linkedin.com/in/german-iii-felisarta-648b9420b",
   },
   {
-    icon: <SiYoutube class="fill-primary w-3" />,
+    icon: (
+      <SiYoutube class="fill-primary w-3 md:group-hover:motion-safe:animate-bounce" />
+    ),
     link: "https://www.youtube.com/channel/UCLdx8-LN-JAnrExazmhjmDA",
   },
 ];
@@ -39,14 +49,11 @@ const Footer = () => {
       </a>
       <ul class="flex fill-primary align-center justify-center gap-x-5">
         {socialLinks.map((social) => (
-          <>
-            <Link
-              to={social.link}
-              class="md:hover:motion-safe:animate-bounce self-center"
-            >
+          <div class="w-full h-full group">
+            <Link to={social.link} class=" self-center">
               <li>{social.icon}</li>
             </Link>
-          </>
+          </div>
         ))}
       </ul>
     </footer>
