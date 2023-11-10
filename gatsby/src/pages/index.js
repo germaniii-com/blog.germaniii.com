@@ -38,6 +38,7 @@ const IndexPage = () => {
             <FeaturedArticleSection />
             <PicTextSection title="How-To" link="/how-to" posts={posts} />
             <TextPicSection title="Technology" link="/tech" posts={posts} />
+            <PicTextSection title="Travel" link="/travel" posts={posts} />
           </div>
         </div>
       </MainLayout>
