@@ -2,6 +2,7 @@ import * as React from "react";
 import MainLayout from "../components/layouts/MainLayout";
 import FeaturedArticleSection from "../components/home/FeaturedArticleSection";
 import TextPicSection from "../components/home/TextPicSection";
+import PicTextSection from "../components/home/PicTextSection";
 
 const pageStyles = {
   color: "#232129",
@@ -35,6 +36,7 @@ const IndexPage = () => {
         <div class="h-fit min-h-screen w-full flex justify-center">
           <div class="grid grid-rows-4 py-5 gap-y-5">
             <FeaturedArticleSection />
+            <PicTextSection title="How-To" link="/how-to" posts={posts} />
             <TextPicSection title="Technology" link="/tech" posts={posts} />
           </div>
         </div>
