@@ -11,7 +11,7 @@ const NavbarButton = ({ name }) => {
   return (
     <>
       <li
-        class={`pointer block p-3 rounded ${
+        class={`pointer block p-3 rounded text-xs md:text-base ${
           isCurrentPage ? currentPageStyle : normalButtonStyle
         }`}
       >
