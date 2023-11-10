@@ -8,16 +8,12 @@ const navbarLinks = [
     link: "/",
   },
   {
-    name: "How-tos",
-    link: "/how-tos",
+    name: "How-To",
+    link: "/how-to",
   },
   {
     name: "Tech",
     link: "/tech",
-  },
-  {
-    name: "Life",
-    link: "/life",
   },
   {
     name: "Travel",
