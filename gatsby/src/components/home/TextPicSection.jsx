@@ -22,7 +22,7 @@ const TextPicSection = ({ title, link, posts }) => {
           </ul>
         </div>
       </div>
-      <div class="self-center bg-accent">Picture</div>
+      <div class="self-center bg-accent hidden md:block">Picture</div>
     </div>
   );
 };
