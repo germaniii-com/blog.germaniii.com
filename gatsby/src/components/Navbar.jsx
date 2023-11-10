@@ -1,23 +1,24 @@
 import { Link } from "gatsby";
 import React from "react";
 import NavbarButton from "./NavbarButton";
+import { PAGES } from "../constants";
 
 const navbarLinks = [
   {
-    name: "Home",
-    link: "/",
+    name: PAGES.HOME,
+    link: `/`,
   },
   {
-    name: "How-To",
-    link: "/how-to",
+    name: PAGES.HOWTO,
+    link: `/${PAGES.HOWTO.toLowerCase()}`,
   },
   {
-    name: "Tech",
-    link: "/tech",
+    name: PAGES.TECH,
+    link: `/${PAGES.TECH.toLowerCase()}`,
   },
   {
-    name: "Travel",
-    link: "/travel",
+    name: PAGES.TRAVEL,
+    link: `/${PAGES.TRAVEL.toLowerCase()}`,
   },
 ];
 
