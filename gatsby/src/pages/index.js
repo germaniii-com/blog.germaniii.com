@@ -1,8 +1,10 @@
 import * as React from "react";
-import MainLayout from "../components/layouts/MainLayout";
-import FeaturedArticleSection from "../components/home/FeaturedArticleSection";
-import TextPicSection from "../components/home/TextPicSection";
-import PicTextSection from "../components/home/PicTextSection";
+import { MainLayout } from "../components/layouts";
+import {
+  FeaturedArticleSection,
+  TextPicSection,
+  PicTextSection,
+} from "../components/home";
 
 const pageStyles = {
   color: "#232129",

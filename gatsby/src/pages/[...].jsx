@@ -1,5 +1,6 @@
 import * as React from "react";
-import MainLayout from "../components/layouts/MainLayout";
+import { MainLayout } from "../components/layouts";
+import { BlogGrid, BlogGridItem } from "../components/category";
 import { blogListPages } from "../constants";
 import { navigate } from "gatsby";
 
@@ -28,7 +29,7 @@ const posts = [
   },
 ];
 
-const IndexPage = ({ params }) => {
+const CategoryPage = ({ params }) => {
   const pageName = params["*"];
   const isValidPage = blogListPages.some(
     (blogItemName) => blogItemName.toLowerCase() === pageName.toLowerCase()
@@ -42,14 +43,24 @@ const IndexPage = ({ params }) => {
   return (
     <main style={pageStyles}>
       <MainLayout>
-        <div class="w-full h-screen">
-          This should be a blog list for {pageName}
+        <div class="w-full h-fit min-h-screen">
+          <BlogGrid>
+            <BlogGridItem title={`${pageName}`} date={`October 2023`} />
+            <BlogGridItem title={`${pageName}`} date={`October 2023`} />
+            <BlogGridItem title={`${pageName}`} date={`October 2023`} />
+            <BlogGridItem title={`${pageName}`} date={`October 2023`} />
+            <BlogGridItem title={`${pageName}`} date={`October 2023`} />
+            <BlogGridItem title={`${pageName}`} date={`October 2023`} />
+            <BlogGridItem title={`${pageName}`} date={`October 2023`} />
+            <BlogGridItem title={`${pageName}`} date={`October 2023`} />
+            <BlogGridItem title={`${pageName}`} date={`October 2023`} />
+          </BlogGrid>
         </div>
       </MainLayout>
     </main>
   );
 };
 
-export default IndexPage;
+export default CategoryPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <title>Blogs Page</title>;
