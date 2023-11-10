@@ -1,7 +1,10 @@
 import React from "react";
 
 const NavbarButton = ({ name }) => {
-  const pathname = window.location.pathname;
+  const pathname =
+    window.location.pathname.length == 1
+      ? window.location.pathname
+      : window.location.pathname.slice(1);
   const currentPageStyle = "bg-primary text-white";
   const normalButtonStyle = "bg-white text-primary hover:text-primary-hover";
   const isCurrentPage =

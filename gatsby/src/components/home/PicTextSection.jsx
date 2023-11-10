@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 const PicTextSection = ({ title, link, posts }) => {
   return (
     <div class="self-center text-primary rounded-xl p-5 flex gap-y-5 flex-col md:flex-row md:gap-x-5">
-      <div class="self-center bg-accent">Picture</div>
+      <div class="self-center bg-accent hidden md:block">Picture</div>
       <div class="flex-grow grid grid-rows-[1fr_auto] gap-y-6">
         <div class="flex flex-col gap-y-1">
           <span class="text-2xl font-bold self-start">{title}</span>
