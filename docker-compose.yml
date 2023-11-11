@@ -40,7 +40,6 @@ services:
       - ./strapi/database:/srv/database
       - ./strapi/public:/srv/public
       - ./strapi/src:/srv/src
-      - ./strapi/backup:/srv/backup
     ports:
       - 1337:1337
 
@@ -48,8 +47,6 @@ services:
     image: mariadb:10.7.4
     container_name: mariadb
     restart: always
-    ports:
-      - 8003:3306
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
