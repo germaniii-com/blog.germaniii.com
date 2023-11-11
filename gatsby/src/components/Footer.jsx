@@ -49,9 +49,9 @@ const Footer = () => {
       </a>
       <ul class="flex fill-primary align-center justify-center gap-x-5">
         {socialLinks.map((social) => (
-          <div class="w-full h-full group">
-            <Link to={social.link} class=" self-center">
-              <li>{social.icon}</li>
+          <div key={social.link} class="w-full h-full group">
+            <Link key={social.link} to={social.link} class=" self-center">
+              <li key={social.link}>{social.icon}</li>
             </Link>
           </div>
         ))}

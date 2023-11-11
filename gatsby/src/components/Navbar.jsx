@@ -30,11 +30,11 @@ const Navbar = () => {
       <ul class="flex align-center justify-center space-x-5">
         {navbarLinks.map((link) => {
           return (
-            <>
-              <Link to={link.link}>
-                {!isSSR && <NavbarButton name={link.name} />}
+            <div key={link.link}>
+              <Link key={link.link} to={link.link}>
+                {!isSSR && <NavbarButton key={link.link} name={link.name} />}
               </Link>
-            </>
+            </div>
           );
         })}
       </ul>
