@@ -8,24 +8,41 @@ const pageStyles = {
   color: "#232129",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
   width: "100%",
-  "overflow-y": "auto",
+  overflow: "auto",
 };
 
 const posts = [
   {
-    date: "October 2023",
     title: "Setting up your Linux Desktop Environment",
-    photo: "https://picsum.photos/300",
+    date: "October 23, 2023",
   },
   {
-    date: "August 2023",
     title: "Formatting Drives with fdisk",
-    photo: "https://picsum.photos/300",
+    date: "May 1, 2023",
   },
   {
-    date: "May 2023",
     title: "Preserving configurations across distros",
-    photo: "https://picsum.photos/300",
+    date: "June 5, 2022",
+  },
+  {
+    title: "A day in the life of a software engineer",
+    date: "December 6, 2022",
+  },
+  {
+    title: "Why I switched from IDEs to the tmux + nvim",
+    date: "December 20, 2021",
+  },
+  {
+    title: "Learning how to Program",
+    date: "October 23, 2023",
+  },
+  {
+    title: "How to not hate CSS",
+    date: "January 23, 2023",
+  },
+  {
+    title: "Australia, a trip",
+    date: "August 13, 2023",
   },
 ];
 
@@ -45,15 +62,13 @@ const CategoryPage = ({ params }) => {
       <MainLayout>
         <div class="w-full h-fit min-h-screen">
           <BlogGrid>
-            <BlogGridItem title={`${pageName}`} date={`October 2023`} />
-            <BlogGridItem title={`${pageName}`} date={`October 2023`} />
-            <BlogGridItem title={`${pageName}`} date={`October 2023`} />
-            <BlogGridItem title={`${pageName}`} date={`October 2023`} />
-            <BlogGridItem title={`${pageName}`} date={`October 2023`} />
-            <BlogGridItem title={`${pageName}`} date={`October 2023`} />
-            <BlogGridItem title={`${pageName}`} date={`October 2023`} />
-            <BlogGridItem title={`${pageName}`} date={`October 2023`} />
-            <BlogGridItem title={`${pageName}`} date={`October 2023`} />
+            {posts.map((post) => (
+              <BlogGridItem
+                key={post.title}
+                title={post.title}
+                date={post.date}
+              />
+            ))}
           </BlogGrid>
         </div>
       </MainLayout>
