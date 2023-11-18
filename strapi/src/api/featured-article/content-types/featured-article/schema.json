@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "featured_articles",
+  "info": {
+    "singularName": "featured-article",
+    "pluralName": "featured-articles",
+    "displayName": "Featured Article",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    },
+    "tag": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tag.tag"
+    }
+  }
+}

@@ -40,7 +40,6 @@ services:
       - ./strapi/database:/srv/database
       - ./strapi/public:/srv/public
       - ./strapi/src:/srv/src
-      - ./strapi/backup:/srv/backup
     ports:
       - 1337:1337
 
