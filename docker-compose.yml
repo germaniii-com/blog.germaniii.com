@@ -6,7 +6,7 @@ services:
       dockerfile: ./gatsby/Dockerfile
     environment:
       - STRAPI_TOKEN=${STRAPI_TOKEN}
-      - STRAPI_API_URL=http://strapi:1337
+      - STRAPI_API_URL=https://blog-strapi.germaniii.com #http://strapi:1337
       - INTERNAL_STATUS_PORT=8001
     command: npm run develop
     volumes:
@@ -41,7 +41,7 @@ services:
       - ./strapi/public:/srv/public
       - ./strapi/src:/srv/src
     ports:
-      - 1337:1337
+      - 8004:1337
 
   mariadb:
     image: mariadb:10.7.4

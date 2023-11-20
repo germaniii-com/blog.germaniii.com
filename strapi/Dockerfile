@@ -10,5 +10,6 @@ COPY ./strapi/src               /srv/src
 
 WORKDIR /srv
 RUN npm install
+RUN npm run build
 
-CMD npm run develop
+CMD npm run start

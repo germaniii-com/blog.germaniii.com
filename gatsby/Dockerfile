@@ -1,4 +1,4 @@
-FROM node:18.2.0-alpine3.15
+FROM node:lts-alpine3.18
 
 COPY ./gatsby/package.json      /srv/package.json
 COPY ./gatsby/package-lock.json /srv/package-lock.json

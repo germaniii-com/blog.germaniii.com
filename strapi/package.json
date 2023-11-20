@@ -9,10 +9,11 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/strapi": "4.14.0",
-    "@strapi/plugin-users-permissions": "4.14.0",
     "@strapi/plugin-i18n": "4.14.0",
-    "mysql": "2.18.1"
+    "@strapi/plugin-users-permissions": "4.14.0",
+    "@strapi/strapi": "4.14.0",
+    "mysql": "2.18.1",
+    "react-dom": "^18.2.0"
   },
   "strapi": {
     "uuid": "82c4e985-4e12-4d97-b397-8b230526afcb"

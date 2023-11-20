@@ -6,3 +6,5 @@ export const PAGES = {
 };
 
 export const blogListPages = [PAGES.HOWTO, PAGES.TECH, PAGES.TRAVEL];
+
+export const strapiURL = "https://blog-strapi.germaniii.com";
