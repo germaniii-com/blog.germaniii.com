@@ -1,9 +1,7 @@
 import * as React from "react";
 import { MainLayout } from "../components/layouts";
 import { BlogGrid, BlogGridItem } from "../components/category";
-import { blogListPages } from "../constants";
-import { navigate } from "gatsby";
-import FetchArticles from "../hooks/FetchArticles";
+import { useStaticQuery, graphql } from "gatsby";
 
 const pageStyles = {
   color: "#232129",
@@ -12,17 +10,26 @@ const pageStyles = {
   overflow: "auto",
 };
 
-const CategoryPage = ({ params }) => {
-  const pageName = params["*"];
-  const articles = FetchArticles();
-  const isValidPage = blogListPages.some(
-    (blogItemName) => blogItemName.toLowerCase() === pageName.toLowerCase()
-  );
-
-  if (!isValidPage) {
-    navigate("/");
-    return;
-  }
+const TravelPage = () => {
+  const articles = useStaticQuery(graphql`
+    query fetchTravelArticles {
+      allStrapiArticle(
+        filter: { tags: { elemMatch: { name: { eq: "Travel" } } } }
+      ) {
+        nodes {
+          id
+          title
+          publishedAt
+          tags {
+            name
+          }
+          cover {
+            url
+          }
+        }
+      }
+    }
+  `);
 
   const posts = articles.allStrapiArticle.nodes.map((node) => ({
     id: node.id,
@@ -53,6 +60,6 @@ const CategoryPage = ({ params }) => {
   );
 };
 
-export default CategoryPage;
+export default TravelPage;
 
-export const Head = () => <title>Blogs Page</title>;
+export const Head = () => <title>Travel | German III Blog</title>;

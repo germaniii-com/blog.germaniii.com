@@ -5,6 +5,8 @@ import {
   TextPicSection,
   PicTextSection,
 } from "../components/home";
+import { useStaticQuery, graphql } from "gatsby";
+import { PAGES } from "../constants";
 
 const pageStyles = {
   color: "#232129",
@@ -13,34 +15,65 @@ const pageStyles = {
   "overflow-y": "auto",
 };
 
-const posts = [
-  {
-    date: "October 2023",
-    title: "Setting up your Linux Desktop Environment",
-    photo: "https://picsum.photos/300",
-  },
-  {
-    date: "August 2023",
-    title: "Formatting Drives with fdisk",
-    photo: "https://picsum.photos/300",
-  },
-  {
-    date: "May 2023",
-    title: "Preserving configurations across distros",
-    photo: "https://picsum.photos/300",
-  },
-];
-
 const IndexPage = () => {
+  const articles = useStaticQuery(graphql`
+    query fetchFeaturedArticles {
+      allStrapiArticle {
+        nodes {
+          id
+          title
+          publishedAt
+          tags {
+            name
+          }
+          cover {
+            url
+          }
+        }
+      }
+    }
+  `);
+  const posts = articles.allStrapiArticle.nodes.map((node) => ({
+    id: node?.id ?? "",
+    title: node?.title ?? "",
+    date: node?.publishedAt ?? "",
+    cover: node?.cover.url ?? "",
+    tags: node?.tags.map((tag) => tag.name) ?? [],
+  }));
+
+  const featuredHowTo = posts.filter((article) =>
+    article.tags.some((tag) => tag.toLowerCase() === PAGES.HOWTO.toLowerCase())
+  );
+
+  const featuredTechnology = posts.filter((article) =>
+    article.tags.some((tag) => tag.toLowerCase() === PAGES.TECH.toLowerCase())
+  );
+
+  const featuredTravel = posts.filter((article) =>
+    article.tags.some((tag) => tag.toLowerCase() === PAGES.TRAVEL.toLowerCase())
+  );
+
   return (
     <main style={pageStyles}>
       <MainLayout>
         <div class="h-fit min-h-screen w-full flex justify-center">
           <div class="grid grid-rows-4 py-5 gap-y-5">
-            <FeaturedArticleSection />
-            <PicTextSection title="How-To" link="/how-to" posts={posts} />
-            <TextPicSection title="Technology" link="/tech" posts={posts} />
-            <PicTextSection title="Travel" link="/travel" posts={posts} />
+            <FeaturedArticleSection post={posts[0]} />
+            <PicTextSection
+              title="How-To"
+              link="/how-to"
+              posts={featuredHowTo}
+            />
+            <TextPicSection
+              title="Technology"
+              link="/tech"
+              posts={featuredTechnology}
+            />
+            <PicTextSection
+              title="Travel"
+              link="/travel"
+              posts={featuredTravel}
+            />
           </div>
         </div>
       </MainLayout>
