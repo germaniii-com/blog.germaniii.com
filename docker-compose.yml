@@ -12,6 +12,7 @@ services:
     volumes:
       - ./gatsby/gatsby-config.js:/srv/gatsby-config.js
       - ./gatsby/gatsby-browser.js:/srv/gatsby-browser.js
+      - ./gatsby/gatsby-node.js:/srv/gatsby-node.js
       - ./gatsby/tailwind.config.js:/srv/tailwind.config.js
       - ./gatsby/postcss.config.js:/srv/postcss.config.js
       - ./gatsby/src:/srv/src
