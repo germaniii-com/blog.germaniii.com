@@ -10,4 +10,4 @@ COPY ./gatsby/src               /srv/src
 
 WORKDIR /srv
 RUN apk add python3 make gcc g++
-RUN npm install
+RUN npm install --legacy-peer-deps
