@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import { strapiURL } from "../../constants";
 
 const FeaturedArticleSection = ({ post }) => {
   return (
@@ -14,7 +15,7 @@ const FeaturedArticleSection = ({ post }) => {
           <Link to="/">{"Read More"}</Link>
         </div>
       </div>
-      <img class="self-center bg-accent" src={post.cover} />
+      <img class="self-center bg-accent" src={`${strapiURL}${post.cover}`} />
     </div>
   );
 };

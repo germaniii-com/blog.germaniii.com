@@ -23,6 +23,7 @@ const IndexPage = () => {
           id
           title
           publishedAt
+          description
           tags {
             name
           }
@@ -36,22 +37,32 @@ const IndexPage = () => {
   const posts = articles.allStrapiArticle.nodes.map((node) => ({
     id: node?.id ?? "",
     title: node?.title ?? "",
+    description: node?.description ?? "",
     date: node?.publishedAt ?? "",
     cover: node?.cover.url ?? "",
     tags: node?.tags.map((tag) => tag.name) ?? [],
   }));
 
-  const featuredHowTo = posts.filter((article) =>
-    article.tags.some((tag) => tag.toLowerCase() === PAGES.HOWTO.toLowerCase())
-  );
+  const featuredHowTo = posts
+    .filter((article) =>
+      article.tags.some(
+        (tag) => tag.toLowerCase() === PAGES.HOWTO.toLowerCase()
+      )
+    )
+    .sort((postA, postB) => postA.date < postB.date);
 
-  const featuredTechnology = posts.filter((article) =>
-    article.tags.some((tag) => tag.toLowerCase() === PAGES.TECH.toLowerCase())
-  );
-
-  const featuredTravel = posts.filter((article) =>
-    article.tags.some((tag) => tag.toLowerCase() === PAGES.TRAVEL.toLowerCase())
-  );
+  const featuredTechnology = posts
+    .filter((article) =>
+      article.tags.some((tag) => tag.toLowerCase() === PAGES.TECH.toLowerCase())
+    )
+    .sort((postA, postB) => postA.date < postB.date);
+  const featuredTravel = posts
+    .filter((article) =>
+      article.tags.some(
+        (tag) => tag.toLowerCase() === PAGES.TRAVEL.toLowerCase()
+      )
+    )
+    .sort((postA, postB) => postA.date < postB.date);
 
   return (
     <main style={pageStyles}>
