@@ -11,13 +11,6 @@ const NavbarButton = ({ name }) => {
     (pathname === "/" && name.toLowerCase() === "home") ||
     pathname.toLowerCase() === name.toLowerCase();
 
-  console.log(
-    "GERMAN",
-    isCurrentPage,
-    pathname.toLowerCase(),
-    name.toLowerCase()
-  );
-
   return (
     <li
       class={`pointer inline-block p-2 md:p-3 rounded text-xs whitespace-nowrap md:text-base ${
