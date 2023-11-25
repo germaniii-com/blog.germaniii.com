@@ -16,7 +16,7 @@ services:
       - ./gatsby/postcss.config.js:/srv/postcss.config.js
       - ./gatsby/src:/srv/src
     ports:
-      - 8002:8000
+      - 8002:9000
       - 8001:8001
 
   strapi:
