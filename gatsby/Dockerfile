@@ -7,7 +7,9 @@ COPY ./gatsby/tailwind.config.js  /srv/tailwind.config.js
 COPY ./gatsby/gatsby-browser.js  /srv/gatsby-browser.js
 COPY ./gatsby/gatsby-node.js  /srv/gatsby-node.js
 COPY ./gatsby/src               /srv/src
+COPY ./gatsby/.env.production ./srv/.env.production
 
 WORKDIR /srv
 RUN apk add python3 make gcc g++
 RUN npm install --legacy-peer-deps
+RUN npm run build
