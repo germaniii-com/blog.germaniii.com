@@ -12,7 +12,7 @@ const FeaturedArticleSection = ({ post }) => {
           {post.description.slice(0, 100).concat("...")}
         </p>
         <div class="w-fit h-fit rounded-full bg-accent text-white p-1.5 text-xs font-bold">
-          <Link to="/">{"Read More"}</Link>
+          <Link to={`/post/${post.id}`}>{"Read More"}</Link>
         </div>
       </div>
       <img class="self-center bg-accent" src={`${strapiURL}${post.cover}`} />

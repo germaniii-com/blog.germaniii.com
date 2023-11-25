@@ -28,7 +28,11 @@ const TextPicSection = ({ title, link, posts }) => {
                 <span class="cursor-pointer block text-xs">
                   {dayjs(post.date).format("YYYY-MM-DD").toString()}
                 </span>
-                <span class="cursor-pointer block font-bold">{post.title}</span>
+                <Link to={`/post/${post.id}`}>
+                  <span class="cursor-pointer block font-bold">
+                    {post.title}
+                  </span>
+                </Link>
               </li>
             ))}
           </ul>
