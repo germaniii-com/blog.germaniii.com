@@ -23,7 +23,7 @@ const navbarLinks = [
 ];
 
 const Navbar = () => {
-  const isSSR = window === undefined;
+  const isSSR = typeof window === `undefined`;
 
   return (
     <nav>
