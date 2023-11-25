@@ -53,7 +53,9 @@ const BlogPost = ({ data }) => {
               <br />
               <br />
               <br />
-              <Markdown>{post.content.data.content}</Markdown>
+              <div>
+                <Markdown class="prose">{post.content.data.content}</Markdown>
+              </div>
             </div>
           ) : (
             <>Sorry this page is unavailable</>

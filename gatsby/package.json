@@ -33,6 +33,7 @@
     "source-map": "^0.7.4"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
     "auto": "^11.0.4",
     "autoprefixer": "^10.4.16",
     "gatsby-plugin-postcss": "^5.25.0",
