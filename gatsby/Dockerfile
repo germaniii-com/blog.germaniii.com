@@ -8,6 +8,8 @@ COPY ./gatsby/gatsby-browser.js  /srv/gatsby-browser.js
 COPY ./gatsby/gatsby-node.js  /srv/gatsby-node.js
 COPY ./gatsby/src               /srv/src
 COPY ./gatsby/.env.production ./srv/.env.production
+COPY ./gatsby/.env.production ./srv/.env
+COPY ./gatsby/.env.development ./srv/.env.development
 
 WORKDIR /srv
 RUN apk add python3 make gcc g++
