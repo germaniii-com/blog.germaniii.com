@@ -47,6 +47,7 @@ const TravelPage = () => {
             {posts.map((post) => (
               <BlogGridItem
                 key={post.title}
+                id={post.id}
                 cover={post.cover}
                 title={post.title}
                 date={post.date}

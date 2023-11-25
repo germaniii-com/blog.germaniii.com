@@ -6,12 +6,12 @@ services:
       dockerfile: ./gatsby/Dockerfile
     environment:
       - STRAPI_TOKEN=${STRAPI_TOKEN}
-      - STRAPI_API_URL=https://blog-strapi.germaniii.com #http://strapi:1337
       - INTERNAL_STATUS_PORT=8001
-    command: npm run develop
+    command: npm run serve
     volumes:
       - ./gatsby/gatsby-config.js:/srv/gatsby-config.js
       - ./gatsby/gatsby-browser.js:/srv/gatsby-browser.js
+      - ./gatsby/gatsby-node.js:/srv/gatsby-node.js
       - ./gatsby/tailwind.config.js:/srv/tailwind.config.js
       - ./gatsby/postcss.config.js:/srv/postcss.config.js
       - ./gatsby/src:/srv/src
