@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import { strapiURL } from "../../constants";
 import dayjs from "dayjs";
-
 const TextPicSection = ({ title, link, posts }) => {
   const [hoveredPost, setHoveredPost] = useState(posts[0]);
   const displayImageURL = posts.find(
@@ -23,7 +22,7 @@ const TextPicSection = ({ title, link, posts }) => {
             {posts.map((post) => (
               <li
                 className="cursor-pointer"
-                onMouseEnter={() => setHoveredPost(post)}
+                onMouseOver={() => setHoveredPost(post)}
                 key={post.id}
               >
                 <span className="cursor-pointer block text-xs">
@@ -39,11 +38,13 @@ const TextPicSection = ({ title, link, posts }) => {
           </ul>
         </div>
       </div>
-      <img
-        className="self-center bg-accent hidden md:block"
-        src={`${strapiURL}${displayImageURL}`}
-        alt="coverphoto"
-      />
+      <div className="max-w-sm max-h-xs md:max-w-md md:max-h-sm">
+        <img
+          className="rounded-lg self-center bg-accent hidden md:block"
+          src={`${strapiURL}${displayImageURL}`}
+          alt="coverphoto"
+        />
+      </div>
     </div>
   );
 };
