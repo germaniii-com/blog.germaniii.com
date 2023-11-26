@@ -13,7 +13,7 @@ const NavbarButton = ({ name }) => {
 
   return (
     <li
-      class={`pointer inline-block p-2 md:p-3 rounded text-xs whitespace-nowrap md:text-base ${
+      className={`pointer inline-block p-2 md:p-3 rounded text-xs whitespace-nowrap md:text-base ${
         isCurrentPage ? currentPageStyle : normalButtonStyle
       }`}
     >

@@ -10,26 +10,27 @@ const TextPicSection = ({ title, link, posts }) => {
   ).cover;
 
   return (
-    <div class="self-center text-primary rounded-xl p-5 flex gap-y-5 flex-col-reverse md:flex-row md:gap-x-5 shadow-lg md:shadow-none">
-      <div class="flex-grow grid grid-rows-[1fr_auto] gap-y-6">
-        <div class="flex flex-col gap-y-1">
-          <span class="text-2xl font-bold self-end">{title}</span>
-          <div class="w-fit h-fit rounded-full p-1.5 bg-accent text-white text-xs font-bold self-end">
+    <div className="self-center text-primary rounded-xl p-5 flex gap-y-5 flex-col-reverse md:flex-row md:gap-x-5 shadow-lg md:shadow-none">
+      <div className="flex-grow grid grid-rows-[1fr_auto] gap-y-6">
+        <div className="flex flex-col gap-y-1">
+          <span className="text-2xl font-bold self-end">{title}</span>
+          <div className="w-fit h-fit rounded-full p-1.5 bg-accent text-white text-xs font-bold self-end">
             <Link to={link}>{"Browse"}</Link>
           </div>
         </div>
-        <div class="w-full text-end">
-          <ul class="grid grid-rows-3 gap-y-1">
+        <div className="w-full text-end">
+          <ul className="grid grid-rows-3 gap-y-1">
             {posts.map((post) => (
               <li
-                class="cursor-pointer"
-                onMouseOver={() => setHoveredPost(post)}
+                className="cursor-pointer"
+                onMouseEnter={() => setHoveredPost(post)}
+                key={post.id}
               >
-                <span class="cursor-pointer block text-xs">
+                <span className="cursor-pointer block text-xs">
                   {dayjs(post.date).format("YYYY-MM-DD").toString()}
                 </span>
                 <Link to={`/post/${post.id}`}>
-                  <span class="cursor-pointer block font-bold">
+                  <span className="cursor-pointer block font-bold">
                     {post.title}
                   </span>
                 </Link>
@@ -39,8 +40,9 @@ const TextPicSection = ({ title, link, posts }) => {
         </div>
       </div>
       <img
-        class="self-center bg-accent hidden md:block"
+        className="self-center bg-accent hidden md:block"
         src={`${strapiURL}${displayImageURL}`}
+        alt="coverphoto"
       />
     </div>
   );

@@ -42,7 +42,7 @@ const TravelPage = () => {
   return (
     <main style={pageStyles}>
       <MainLayout>
-        <div class="w-full h-fit min-h-screen">
+        <div className="w-full h-fit min-h-screen">
           <BlogGrid>
             {posts.map((post) => (
               <BlogGridItem
