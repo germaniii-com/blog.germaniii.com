@@ -32,29 +32,31 @@ const BlogPost = ({ data }) => {
   return (
     <main>
       <MainLayout>
-        <div class="w-full h-fit min-h-screen">
+        <div className="w-full h-fit min-h-screen">
           {data ? (
             <div>
               <img
-                class="w-full"
+                className="w-full"
                 src={`${strapiURL}${post.cover.url}`}
                 alt="coverpage"
               />
-              <span class="font-bold text-2xl">{post.title}</span>
-              <span class="block text-xs">
+              <span className="font-bold text-2xl">{post.title}</span>
+              <span className="block text-xs">
                 {dayjs(post.publishedAt)
                   .format("HH:MM (ddd) MM-DD-YYYY")
                   .toString()}
               </span>
               <br />
-              <span class="block text-md">
+              <span className="block text-md">
                 {post.tags.map((tag) => tag.name).join(" | ")}
               </span>
               <br />
               <br />
               <br />
               <div>
-                <Markdown class="prose">{post.content.data.content}</Markdown>
+                <Markdown className="prose">
+                  {post.content.data.content}
+                </Markdown>
               </div>
             </div>
           ) : (

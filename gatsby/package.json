@@ -6,6 +6,7 @@
     "develop": "gatsby develop -H 0.0.0.0 --verbose",
     "start": "gatsby develop --verbose",
     "build": "NODE_ENV=production gatsby build --verbose",
+    "build:css": "npx tailwindcss -o ./src/styles/build.css --minify",
     "serve": "gatsby serve -H 0.0.0.0",
     "clean": "gatsby clean"
   },

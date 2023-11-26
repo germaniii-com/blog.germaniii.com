@@ -14,4 +14,5 @@ COPY ./gatsby/.env.development ./srv/.env.development
 WORKDIR /srv
 RUN apk add python3 make gcc g++
 RUN npm install --legacy-peer-deps
+RUN npm run build:css
 RUN npm run build

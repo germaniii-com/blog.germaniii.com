@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <ul class="flex align-center justify-center space-x-5">
+      <ul className="flex align-center justify-center space-x-5">
         {navbarLinks.map((link) => {
           return (
             <div key={link.link}>

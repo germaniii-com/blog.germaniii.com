@@ -12,7 +12,7 @@ const pageStyles = {
   color: "#232129",
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
   width: "100%",
-  "overflow-y": "auto",
+  overflow: "auto",
 };
 
 const IndexPage = () => {
@@ -67,8 +67,8 @@ const IndexPage = () => {
   return (
     <main style={pageStyles}>
       <MainLayout>
-        <div class="h-fit min-h-screen w-full flex justify-center">
-          <div class="grid grid-rows-4 py-5 gap-y-5">
+        <div className="h-fit min-h-screen w-full flex justify-center">
+          <div className="grid grid-rows-4 py-5 gap-y-5">
             <FeaturedArticleSection post={posts[0]} />
             <PicTextSection
               title="How-To"
