@@ -15,11 +15,13 @@ const FeaturedArticleSection = ({ post }) => {
           <Link to={`/post/${post.id}`}>{"Read More"}</Link>
         </div>
       </div>
-      <img
-        className="self-center bg-accent"
-        src={`${strapiURL}${post.cover}`}
-        alt="coverphoto"
-      />
+      <div className="max-w-sm max-h-xs md:max-w-md md:max-h-sm">
+        <img
+          className="rounded-lg self-center bg-accent"
+          src={`${strapiURL}${post.cover}`}
+          alt="coverphoto"
+        />
+      </div>
     </div>
   );
 };

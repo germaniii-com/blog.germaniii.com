@@ -11,11 +11,13 @@ const PicTextSection = ({ title, link, posts }) => {
 
   return (
     <div className="self-center text-primary rounded-xl p-5 flex gap-y-5 flex-col md:flex-row md:gap-x-5 shadow-lg md:shadow-none">
-      <img
-        className="self-center bg-accent hidden md:block"
-        src={`${strapiURL}${displayImageURL}`}
-        alt="coverphoto"
-      />
+      <div className="max-w-sm max-h-xs md:max-w-md md:max-h-sm">
+        <img
+          className="rounded-lg self-center bg-accent hidden md:block"
+          src={`${strapiURL}${displayImageURL}`}
+          alt="coverphoto"
+        />
+      </div>
       <div className="flex-grow grid grid-rows-[1fr_auto] gap-y-6">
         <div className="flex flex-col gap-y-1">
           <span className="text-2xl font-bold self-start">{title}</span>
@@ -28,7 +30,7 @@ const PicTextSection = ({ title, link, posts }) => {
             {posts.map((post) => (
               <li
                 className="cursor-pointer"
-                onMouseEnter={() => setHoveredPost(post)}
+                onMouseOver={() => setHoveredPost(post)}
                 key={post.id}
               >
                 <span className="cursor-pointer block text-xs">
