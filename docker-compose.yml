@@ -4,6 +4,7 @@ services:
     build:
       context: ./
       dockerfile: ./gatsby/Dockerfile
+    restart: always
     environment:
       - STRAPI_TOKEN=${STRAPI_TOKEN}
       - INTERNAL_STATUS_PORT=8001
