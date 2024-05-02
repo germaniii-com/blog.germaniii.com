@@ -64,14 +64,24 @@ import { SITE_TITLE } from '../consts';
 		justify-content: space-between;
 	}
 	nav a {
-		padding: 1em 0.5em;
+		margin: 1em;
+		padding: 0.5em;
 		color: var(--black);
-		border-bottom: 4px solid transparent;
 		text-decoration: none;
 	}
 	nav a.active {
 		text-decoration: none;
-		border-bottom-color: var(--accent);
+		color: white;
+		background: var(--black);
+		border-radius: 1em;
+	}
+	nav a.active:hover {
+		background: var(--black);
+	}
+	nav a:hover {
+		color: white;
+		background: var(--black-hover);
+		border-radius: 1em;
 	}
 	.social-links,
 	.social-links a {
