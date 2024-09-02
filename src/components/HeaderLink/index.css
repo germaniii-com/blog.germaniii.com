@@ -1,0 +1,8 @@
+a {
+	display: inline-block;
+	text-align: center;
+}
+
+a.active {
+	font-weight: bolder;
+}
