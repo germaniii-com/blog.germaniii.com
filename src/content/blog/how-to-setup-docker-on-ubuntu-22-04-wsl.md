@@ -1,6 +1,6 @@
 ---
-title: 'How to setup Docker on Ubuntu 22.04 WSL'
-description: 'Setup Docker on Ubuntu 22.04 on Windows Subsystem for Linux'
+title: 'How to setup Docker on Ubuntu WSL'
+description: 'Setup Docker on Ubuntu on Windows Subsystem for Linux'
 pubDate: 'Sep 03 2024'
 ---
 
