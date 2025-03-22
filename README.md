@@ -1,29 +1,18 @@
-# blog.germaniii.com
+# Quartz v4
 
-This is a repository for the German III blog. which can be accessed at https://blog.germaniii.com.
-This will also serve as a wiki for development, consolidating all my learnings throughout my career, and breaking them down into different notes.
+> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
 
-## Technology
+Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
 
-Initially planned was Gatsby, Tailwind and Strapi CMS.
-Due to high maintenance, I have opted to use Astro since I would only have to make markdown files for the blog posts.
+🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
 
+[Join the Discord Community](https://discord.gg/cRFFHYye7t)
 
-## Notes
+## Sponsors
 
-### 🧞 Commands (Astro Readme)
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+<p align="center">
+  <a href="https://github.com/sponsors/jackyzha0">
+    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
+  </a>
+</p>

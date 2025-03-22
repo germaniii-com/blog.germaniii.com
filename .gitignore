@@ -1,7 +1,11 @@
 .DS_Store
-.env
-gatsby/.cache/
-gatsby/public/
-node_modules/
-strapi/backup
-.astro
+.gitignore
+node_modules
+public
+prof
+tsconfig.tsbuildinfo
+.obsidian
+.quartz-cache
+private/
+.replit
+replit.nix
