@@ -1,6 +1,10 @@
 ---
-title: Welcome to Quartz
+id: index
+aliases: []
+tags: []
+title: Welcome to wiki.germaniii.com
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+This wiki was supposed to be a blog, but I don't do blogs. So let's call it a wiki.
+
+This site is forever a work in progress since learning is life long. I will be updating this every now and then to add new knowledge.

@@ -8,15 +8,15 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
-    pageTitleSuffix: "",
+    pageTitle: "German III Wiki",
+    pageTitleSuffix: " | wiki.germaniii.com",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "wiki.germaniii.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
@@ -24,31 +24,31 @@ const config: QuartzConfig = {
       cdnCaching: true,
       typography: {
         header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        body: "Noto Sans",
+        code: "Fira Code",
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          light: "#fbf1c7", // Gruvbox light background
+          lightgray: "#ebdbb2", // Lightest grayish tone
+          gray: "#d5c4a1", // Soft gray
+          darkgray: "#665c54", // Medium dark gray
+          dark: "#3c3836", // Dark gray (text color)
+          secondary: "#b57614", // Warm yellow-orange accent
+          tertiary: "#8ec07c", // Muted green accent
+          highlight: "rgba(215, 153, 33, 0.15)", // Gruvbox yellow highlight
+          textHighlight: "#fabd2f88", // Soft orange-yellow text highlight
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          light: "#1d2021", // Gruvbox dark background
+          lightgray: "#282828", // Slightly lighter background
+          gray: "#504945", // Medium gray
+          darkgray: "#bdae93", // Light warm gray
+          dark: "#ebdbb2", // Lightest text color
+          secondary: "#d65d0e", // Dark mode orange accent
+          tertiary: "#689d6a", // Muted green
+          highlight: "rgba(250, 189, 47, 0.15)", // Gruvbox orange highlight
+          textHighlight: "#fabd2f88", // Text highlight (same as light mode for contrast)
         },
       },
     },
@@ -61,8 +61,8 @@ const config: QuartzConfig = {
       }),
       Plugin.SyntaxHighlighting({
         theme: {
-          light: "github-light",
-          dark: "github-dark",
+          light: "kanagawa-wave",
+          dark: "kanagawa-dragon",
         },
         keepBackground: false,
       }),
