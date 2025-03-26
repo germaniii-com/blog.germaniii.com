@@ -3,6 +3,8 @@ id: task estimates
 aliases: []
 tags:
   - softskills
+  - estimates
+  - management
 ---
 
 In my time at Bluewind Asia, there is one point where my boss taught me one thing about time management.

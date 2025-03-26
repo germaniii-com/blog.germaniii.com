@@ -1,12 +1,15 @@
 ---
-title: 'How to run an NGINX Reverse Proxy server using Docker compose'
-description: 'How to run an nginx container running as a reverse proxy server with basic configuration on docker using a docker compose file'
-pubDate: 'Sep 04 2024'
+id: nginx
+aliases: []
+tags: []
+description: How to run an nginx container running as a reverse proxy server with basic configuration on docker using a docker compose file
+pubDate: Sep 04 2024
+title: How to run an NGINX Reverse Proxy server using Docker compose
 ---
 
 ## Before we begin
 
-Make sure you have docker installed on your system. If you are on windows, I have a short guide on how to install it in [WSL](https://blog.germaniii.com/blog/how-to-setup-docker-on-ubuntu-22-04-wsl)
+Make sure you have docker installed on your system. If you are on windows, I have a short guide on how to install it in [[wsl]]
 
 ## Create a directory to store your files
 
