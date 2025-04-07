@@ -30,3 +30,4 @@ Due to the advance of AI technologies, there are more applications and use-cases
 - [[RAG]]
 - [[Fine Tuning]]
 - [[Prompt Engineering]]
+- [[Quantization]]
