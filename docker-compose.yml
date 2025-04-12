@@ -1,0 +1,12 @@
+services:
+  app:
+    container_name: blog.germaniii.com
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    restart: always
+    volumes:
+      - /app/node_modules
+      - /app/public
+    ports:
+      - 8002:8080
