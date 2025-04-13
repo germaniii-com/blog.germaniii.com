@@ -1,0 +1,32 @@
+name: Build and Push Image
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    env:
+      REGISTRY: ${{ vars.BASE_URL }}
+      IMAGE_NAME: ${{ vars.USER }}/blog.germaniii.com
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Login to Gitea Container Registry
+        run: echo "${{ secrets.PAT }}" | docker login $REGISTRY -u ${{ vars.USER }} --password-stdin
+
+      - name: Build Docker image
+        run: |
+          docker build \
+            --file Dockerfile.prod \
+            --build-arg APP_ENV=production \
+            -t $REGISTRY/$IMAGE_NAME:latest .
+
+      - name: Push image
+        run: docker push $REGISTRY/$IMAGE_NAME:latest
+
