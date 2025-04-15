@@ -24,6 +24,12 @@ rmdir /tmp/.X11-unix && ln -s /mnt/wslg/.X11-unix /tmp/.X11-unix
 
 2. Create a systemd service
 
+```
+touch /etc/systemd/system/wslg.service
+```
+
+And add the contents:
+
 ```bash
 [Unit]
 Description=symlink /tmp/.X11-unix
