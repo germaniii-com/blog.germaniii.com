@@ -6,8 +6,6 @@ tags:
   - bash
 ---
 
-# bash
-
 ## Directory Structure
 In order to setup and customize your bash shell, you must have the following:
 

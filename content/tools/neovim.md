@@ -6,8 +6,6 @@ tags:
   - neovim
 ---
 
-# neovim
-
 Neovim is a modern version of vim. In my first job as a Firmware Engineer, I was exposed to linux tools and that's technically where my professional linux journey began.
 When I moved to the second company I worked for, Bluewind, I given all the time to hone my skills and so I dived deeper into linux. 
 At that time, WSL2 was increasing in popularity, naturally, I jumped right into it.
