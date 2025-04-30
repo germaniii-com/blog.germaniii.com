@@ -31,6 +31,10 @@ Here are some keybinds I picked up in bash that makes my life easier:
   - Traverse long command lines horizontally, faster.
 - ^r
   - Browse the bash_history
+- ^a
+  - Go to start of line
+- ^e
+  - Go to end of line
 
 ## Applications
 Here are the applications that really helps me in traversing the bash shell:
