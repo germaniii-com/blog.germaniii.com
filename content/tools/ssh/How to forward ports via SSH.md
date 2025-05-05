@@ -47,8 +47,6 @@ In our example, we use:
   - This can also be set as any other domain that is accessible to the remote computer (useful for IP restricted stuff)
   - For example:  `172.18.122.4:3000` will forward a port a service from another computer/host to your client computer
 
-```
-
 ## SSH Backward
 
 If you are already done messing with your remote services. You can now close the access to them by just killing the ssh process.
